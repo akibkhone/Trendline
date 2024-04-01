@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'CarismaLight';
+	src: url(/fonts/CarismaClassic-300Light.ttf);
+}
+@font-face {
+	font-family: 'CarismaMedium';
+	src: url(/fonts/CarismaClassic-500Medium.ttf);
+}
+@font-face {
+	font-family: 'CarismaBold';
+	src: url(/fonts/CarismaClassic-600DemiBold.ttf);
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-family: 'CarismaLight';
+}
+
+main {
+	height: 100%;
+	width: 100%;
+}
+
+nav {
+	height: 14%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#nav1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	font-size: 1vw;
+}
+
+#logo {
+	width: 2rem;
+	height: 1rem;
+	position: relative;
+}
+
+#logo::before,
+#logo::after {
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+}
+
+#logo::before {
+	left: 0;
+}
+
+#logo::after {
+	right: 0;
+}
+
+#region {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+#region h5:nth-child(2) {
+	color: #aaaaaa;
+}
+
+.menu {
+	display: none;
+}
+
+#menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+#nav2 {
+	width: 60%;
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	padding: 1rem 2rem;
+	font-size: 1vw;
+}
+
+#top {
+	height: 43%;
+}
+
+#top .swiper {
+	width: 100%;
+	height: 100%;
+}
+
+#top .swiper-slide {
+	padding: 4rem;
+	text-align: center;
+	background: #fff;
+	display: flex;
+	gap: 10vw;
+	align-items: start;
+	justify-content: center;
+}
+
+#top .swiper-scrollbar {
+	background-color: white;
+}
+
+#top .swiper-scrollbar .swiper-scrollbar-drag {
+	background-color: #ec774f;
+}
+
+.slide-right {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	text-align: left;
+}
+
+#top h3:first-child {
+	font-family: 'CarismaBold';
+	font-size: larger;
+}
+
+#top .slide-right h1 {
+	font-size: 5vw;
+}
+
+#bottom {
+	height: 43%;
+}
+
+#bottom .swiper {
+	width: 100%;
+	height: 100%;
+}
+
+#bottom .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+	nav {
+		height: 10%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.menu {
+		padding: 1rem 1rem;
+		font-size: 1.2rem;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	#top {
+		height: 40%;
+	}
+
+	#top h3:first-child {
+		font-size: 4vw;
+	}
+
+	#top .slide-right h1 {
+		font-size: 10vw;
+	}
+
+	#bottom {
+		height: 50%;
+	}
+}
